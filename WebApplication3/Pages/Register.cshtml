@@ -1,40 +1,163 @@
 ﻿@page
 @model WebApplication3.Pages.RegisterModel
 @{
+    ViewData["Title"] = "Member Registration";
 }
+<h2>@ViewData["Title"]</h2>
+<form method="post" enctype="multipart/form-data">
+    <!-- Full Name -->
+    <div>
+        <label asp-for="RegisterData.FullName">Full Name:</label>
+        <input asp-for="RegisterData.FullName" required />
+    </div>
+    <!-- Credit Card Number -->
+    <div>
+        <label asp-for="RegisterData.CreditCard">Credit Card Number:</label>
+        <input asp-for="RegisterData.CreditCard" required />
+    </div>
+    <!-- Gender -->
+    <div>
+        <label asp-for="RegisterData.Gender">Gender:</label>
+        <select asp-for="RegisterData.Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <!-- Mobile No -->
+    <div>
+        <label asp-for="RegisterData.MobileNo">Mobile No:</label>
+        <input asp-for="RegisterData.MobileNo" required />
+    </div>
+    <!-- Delivery Address -->
+    <div>
+        <label asp-for="RegisterData.DeliveryAddress">Delivery Address:</label>
+        <textarea asp-for="RegisterData.DeliveryAddress"></textarea>
+    </div>
+    <!-- Email Address -->
+    <div>
+        <label asp-for="RegisterData.Email">Email Address:</label>
+        <input asp-for="RegisterData.Email" required />
+    </div>
+    <!-- Password -->
+    <div>
+        <label asp-for="RegisterData.Password">Password:</label>
+        <input asp-for="RegisterData.Password" type="password" required />
+    </div>
+    <!-- Confirm Password -->
+    <div>
+        <label asp-for="RegisterData.ConfirmPassword">Confirm Password:</label>
+        <input asp-for="RegisterData.ConfirmPassword" type="password" required />
+    </div>
+    <!-- Photo Upload -->
+    <div>
+        <label asp-for="RegisterData.Photo">Photo Upload:</label>
+        <input asp-for="RegisterData.Photo" type="file" accept=".jpg" />
+    </div>
+    <!-- About Me -->
+    <div>
+        <label asp-for="RegisterData.AboutMe">About Me:</label>
+        <textarea asp-for="RegisterData.AboutMe"></textarea>
+    </div>
 
-<div class="container mt-5">
+    <button type="submit">Register</button>
+</form>
+@section Scripts {
 
-	<div class="row justify-content-center align-items-center">
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var passwordInput = document.getElementById('RegisterData_Password');
+    var strengthMessage = document.getElementById('password-strength-message');
 
-		<div class="col-sm-12 col-md-12 col-lg-4">
-			<h1 class="mb-3">Register </h1>
+    if (passwordInput) {
+    passwordInput.addEventListener('input', function () {
+    var password = this.value;
+    checkPasswordStrength(password, strengthMessage);
+    });
+    }
+    });
 
-			<form method="post">
-				<div asp-validation-summary="All" class="text-danger"></div>
+    function checkPasswordStrength(password, strengthMessage) {
+    var lengthCheck = password.length >= 12;
+    var uppercaseCheck = /[A-Z]/.test(password);
+    var lowercaseCheck = /[a-z]/.test(password);
+    var specialCharCheck = /[$!%#?&]/.test(password);
+    var numberCheck = /\d/.test(password);
 
-				<div class="mb-3">
-					<label class="form-label" asp-for="RModel.Email">Email Address</label>
-					<input type="Text" asp-for="RModel.Email" class="form-control" />
-					<span asp-validaton-for="RModel.Email" class="text-danger"></span>
-				</div>
+    var messages = [];
 
-				<div class="mb-3">
-					<label class="form-label" asp-for="RModel.Password">Password</label>
-					<input type="Text" asp-for="RModel.Password" class="form-control" />
-					<span asp-validaton-for="RModel.Password" class="text-danger"></span>
-				</div>
+    if (!lengthCheck) messages.push('Password must be at least 12 characters.');
+    if (!uppercaseCheck) messages.push('Password must contain at least one uppercase letter.');
+    if (!lowercaseCheck) messages.push('Password must contain at least one lowercase letter.');
+    if (!specialCharCheck) messages.push('Password must contain at least one special character ($!%#?&).');
+    if (!numberCheck) messages.push('Password must contain at least one number.');
 
-				<div class="mb-3">
-					<label class="form-label" asp-for="RModel.ConfirmPassword">Confirm Password</label>
-					<input type="Text" asp-for="RModel.ConfirmPassword" class="form-control" />
-					<span asp-validaton-for="RModel.ConfirmPassword" class="text-danger"></span>
-				</div>
+    strengthMessage.style.color = 'red';
+    strengthMessage.style.display = messages.length ? 'block' : 'none';
+    }
 
-				<div class="mb-3">
-					<button type="submit" class="btn btn-primary">Register</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
+}</script>
+}
+<style>
+    /* General body styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Style for the form */
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    /* Input and textarea styling */
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="file"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-sizing: border-box; /* Makes sure padding doesn't affect overall width */
+    }
+
+    /* Styling for labels */
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+    }
+
+    /* Button styling */
+    button[type="submit"] {
+        background-color: #0056b3; /* A blue that indicates technology */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #003d82; /* Darken button on hover */
+        }
+
+    /* Password strength message styling */
+    #password-strength-message {
+        margin-top: 10px;
+    }
+
+   
+</style>
+

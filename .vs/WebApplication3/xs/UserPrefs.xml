@@ -1,0 +1,73 @@
+﻿<Properties StartupConfiguration="{201D8DE2-5859-48CC-9337-6B2C49E93298}|Default">
+  <MonoDevelop.Ide.ItemProperties.WebApplication3 PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebApplication3/Pages/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="WebApplication3/Pages/Register.cshtml" Line="8" Column="23" />
+      <File FileName="WebApplication3/Model/AuthDbContext.cs" Line="27" Column="2" />
+      <File FileName="WebApplication3/Pages/Register.cshtml.cs" Line="16" Column="26" />
+      <File FileName="WebApplication3/ViewModels/Register.cs" Line="31" Column="43" />
+      <File FileName="WebApplication3/Pages/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="WebApplication3/Pages/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="WebApplication3/Program.cs" Line="60" Column="39" />
+      <File FileName="WebApplication3/appsettings.Development.json" />
+      <File FileName="WebApplication3/appsettings.json" Line="18" Column="1" />
+      <File FileName="WebApplication3/Pages/Index.cshtml" Line="62" Column="15" />
+      <File FileName="WebApplication3/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="WebApplication3/Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="WebApplication3/Pages/Error.cshtml" />
+      <File FileName="WebApplication3/Pages/Error.cshtml.cs" Line="27" Column="2" />
+      <File FileName="WebApplication3/Services/EncryptionService.cs" />
+      <File FileName="WebApplication3/Pages/Index.cshtml.cs" Line="65" Column="10" />
+      <File FileName="WebApplication3/Pages/_ViewImports.cshtml" />
+      <File FileName="WebApplication3/Pages/Privacy.cshtml.cs" Line="1" Column="1" />
+      <File FileName="WebApplication3/WebApplication3.csproj" Line="10" Column="14" />
+      <File FileName="WebApplication3/Model/AuditLog.cs" Line="6" Column="37" />
+      <File FileName="WebApplication3/Model/ApplicationUser.cs" Line="22" Column="1" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.312/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
+      <File FileName="WebApplication3/Migrations/20240204194501_InitialCreate.cs" Line="17" Column="7" />
+      <File FileName="WebApplication3/Migrations/AuthDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="WebApplication3/Migrations/20240204194501_InitialCreate.Designer.cs" Line="1" Column="1" />
+      <File FileName="WebApplication3/Pages/Login.cshtml" Line="1" Column="1" />
+      <File FileName="WebApplication3/Pages/Login.cshtml.cs" Line="19" Column="52" />
+      <File FileName="WebApplication3/Pages/Logout.cshtml.cs" Line="46" Column="1" />
+      <File FileName="WebApplication3/ViewModels/Login.cs" Line="20" Column="1" />
+      <File FileName="WebApplication3/Pages/Logout.cshtml" Line="1" Column="1" />
+      <File FileName="WebApplication3/Services/AuditLogService.cs" Line="26" Column="48" />
+      <File FileName="WebApplication3/Pages/Shared/_Layout.cshtml" Line="49" Column="4" />
+      <File FileName="WebApplication3/Pages/Shared/_Layout.cshtml.css" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebApplication3" expanded="True">
+            <Node name="WebApplication3">
+              <Node name="Migrations">
+                <Node name="20240204194501_InitialCreate.cs" expanded="True" />
+              </Node>
+              <Node name="Model" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Shared">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+                <Node name="Error.cshtml" expanded="True" />
+                <Node name="Index.cshtml" expanded="True" />
+                <Node name="Login.cshtml" expanded="True" />
+                <Node name="Logout.cshtml" expanded="True" />
+                <Node name="Privacy.cshtml" expanded="True" />
+                <Node name="Register.cshtml" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

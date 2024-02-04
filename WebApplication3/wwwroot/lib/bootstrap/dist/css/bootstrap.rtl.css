@@ -2933,9 +2933,9 @@ textarea.form-control-lg {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  -webkit-RegisterData-select: none;
+  -moz-RegisterData-select: none;
+  RegisterData-select: none;
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
@@ -5345,9 +5345,9 @@ textarea.form-control-lg {
 }
 .btn-close:disabled, .btn-close.disabled {
   pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  -webkit-RegisterData-select: none;
+  -moz-RegisterData-select: none;
+  RegisterData-select: none;
   opacity: 0.25;
 }
 
@@ -7799,22 +7799,22 @@ textarea.form-control-lg {
   background-image: var(--bs-gradient) !important;
 }
 
-.user-select-all {
-  -webkit-user-select: all !important;
-  -moz-user-select: all !important;
-  user-select: all !important;
+.RegisterData-select-all {
+  -webkit-RegisterData-select: all !important;
+  -moz-RegisterData-select: all !important;
+  RegisterData-select: all !important;
 }
 
-.user-select-auto {
-  -webkit-user-select: auto !important;
-  -moz-user-select: auto !important;
-  user-select: auto !important;
+.RegisterData-select-auto {
+  -webkit-RegisterData-select: auto !important;
+  -moz-RegisterData-select: auto !important;
+  RegisterData-select: auto !important;
 }
 
-.user-select-none {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  user-select: none !important;
+.RegisterData-select-none {
+  -webkit-RegisterData-select: none !important;
+  -moz-RegisterData-select: none !important;
+  RegisterData-select: none !important;
 }
 
 .pe-none {

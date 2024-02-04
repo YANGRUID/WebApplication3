@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ruidongyang/Documents/Year2 sem2/Application Security/WebApplication3/WebApplication3/WebApplication3.csproj": {}
+    "/Users/ruidongyang/Documents/GitHub/WebApplication3/WebApplication3/WebApplication3.csproj": {}
   },
   "projects": {
-    "/Users/ruidongyang/Documents/Year2 sem2/Application Security/WebApplication3/WebApplication3/WebApplication3.csproj": {
+    "/Users/ruidongyang/Documents/GitHub/WebApplication3/WebApplication3/WebApplication3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ruidongyang/Documents/Year2 sem2/Application Security/WebApplication3/WebApplication3/WebApplication3.csproj",
+        "projectUniqueName": "/Users/ruidongyang/Documents/GitHub/WebApplication3/WebApplication3/WebApplication3.csproj",
         "projectName": "WebApplication3",
-        "projectPath": "/Users/ruidongyang/Documents/Year2 sem2/Application Security/WebApplication3/WebApplication3/WebApplication3.csproj",
+        "projectPath": "/Users/ruidongyang/Documents/GitHub/WebApplication3/WebApplication3/WebApplication3.csproj",
         "packagesPath": "/Users/ruidongyang/.nuget/packages/",
-        "outputPath": "/Users/ruidongyang/Documents/Year2 sem2/Application Security/WebApplication3/WebApplication3/obj/",
+        "outputPath": "/Users/ruidongyang/Documents/GitHub/WebApplication3/WebApplication3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ruidongyang/.nuget/NuGet/NuGet.Config"
@@ -20,7 +20,6 @@
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.312/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,21 +40,27 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -77,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.312/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,7 +4,59 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <h1>Welcome to the Home Page</h1>
+
+    @if (Model.CurrentUser == null)
+    {
+        <!-- Display welcome message for users who are not logged in -->
+        <div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>
+    }
+    else
+    {
+        <!-- Display user details for logged-in users -->
+        <div class="user-details">
+            <h2>User Details</h2>
+            <dl>
+                <dt>Full Name:</dt>
+                <dd>@Model.CurrentUser.FullName</dd>
+
+                <dt>Email:</dt>
+                <dd>@Model.CurrentUser.Email</dd>
+
+                <dt>Gender:</dt>
+                <dd>@Model.CurrentUser.Gender</dd>
+
+                <dt>Mobile Number:</dt>
+                <dd>@Model.CurrentUser.MobileNo</dd>
+
+                <dt>Credit Card:</dt>
+                <dd id="creditCard">@Model.DecryptedCreditCard</dd>
+                <button type="button" class="toggle-button" onclick="toggleCreditCard()">Toggle Credit Card</button>
+
+                <dt>Delivery Address:</dt>
+                <dd>@Model.CurrentUser.DeliveryAddress</dd>
+
+                <dt>About Me:</dt>
+                <dd>@Model.CurrentUser.AboutMe</dd>
+
+                <dt>Photo:</dt>
+                <img src="~/uploads/@Model.CurrentUser.Photo" alt="User Photo" class="user-photo" />
+            </dl>
+            <button type="button" class="btn btn-primary" onclick="window.location.href = '@Url.Page("ChangePassword")'">
+                Change Password
+            </button>
+        </div>
+    }
+
 </div>
+
+
+<script>// Function to toggle the visibility of the credit card information
+    function toggleCreditCard() {
+        var creditCardElement = document.getElementById('creditCard');
+        creditCardElement.classList.toggle('hidden');
+    }</script>
